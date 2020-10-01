@@ -6,6 +6,7 @@ import HomePage from "./src/screens/HomePage"
 import ProfilePage from "./src/screens/ProfilePage"
 import SemesterPage from "./src/screens/SemesterPage"
 import FacultyPage from "./src/screens/FacultyPage"
+import CoursePage from "./src/screens/CoursePage"
 
 const stack = createStackNavigator();
 
@@ -17,6 +18,7 @@ function app(){
         <stack.Screen name="Profile" component ={ProfilePage}></stack.Screen>
         <stack.Screen name="Semesters" component ={SemesterPage}></stack.Screen>
         <stack.Screen name="Faculty Members" component ={FacultyPage}></stack.Screen>
+        <stack.Screen name="Courses" component ={CoursePage}></stack.Screen>
       </stack.Navigator>
     </NavigationContainer>
   );
