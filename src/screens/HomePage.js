@@ -31,14 +31,14 @@ const HomePage = (props) => {
       <Button
         title="Semesters"
         onPress={function () {
-          console.log("go to semester list");
+          props.navigation.navigate("Semesters");
         }}
       ></Button>
       <Text></Text>
       <Button
         title="Faculty members"
         onPress={function () {
-          console.log("Go to faculty list");
+          props.navigation.navigate("Faculty Members");
         }}
       ></Button>
       <Text></Text>
