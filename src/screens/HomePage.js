@@ -8,7 +8,9 @@ import {
   Image,
 } from "react-native";
 
-const HomePage = () => {
+import ProfilePage from "./ProfilePage"
+
+const HomePage = (props) => {
   return (
     <View style={style.viewStyle}>
       <Image
@@ -20,7 +22,7 @@ const HomePage = () => {
       <Text></Text>
       <TouchableOpacity
         onPress={function () {
-          console.log("go to profile page");
+          props.navigation.navigate("Profile");
         }}
       >
         <Text style={style.touchableText}>My Profile</Text>
