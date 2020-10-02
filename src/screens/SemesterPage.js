@@ -38,7 +38,7 @@ const SemesterPage = (props) => {
       <Text style={style.textStyle2}></Text>
       <TouchableOpacity
         onPress={function () {
-          props.navigation.navigate("Courses", { courseList: semester1 });
+          props.navigation.navigate("Courses", {semesterName:"First Semester", courseList: semester1 });
         }}
       >
         <Text style={style.textStyle}>First Semester</Text>
@@ -48,7 +48,7 @@ const SemesterPage = (props) => {
       <Text style={style.textStyle2}></Text>
       <TouchableOpacity
         onPress={function () {
-          props.navigation.navigate("Courses", { courseList: semester2 });
+          props.navigation.navigate("Courses", {semesterName:"Second Semester", courseList: semester2 });
         }}
       >
         <Text style={style.textStyle}>Second Semester</Text>
@@ -58,7 +58,7 @@ const SemesterPage = (props) => {
       <Text style={style.textStyle2}></Text>
       <TouchableOpacity
         onPress={function () {
-          props.navigation.navigate("Courses", { courseList: semester3 });
+          props.navigation.navigate("Courses", {semesterName:"Third Semester", courseList: semester3 });
         }}
       >
         <Text style={style.textStyle}>Third Semester</Text>

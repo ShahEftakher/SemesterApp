@@ -3,13 +3,12 @@ import { View, FlatList, Text, StyleSheet } from "react-native";
 
 const CoursePage = (props) => {
 
-    const {courseList} = props.route.params;
-    {console.log(props);}
+    const {semesterName,courseList} = props.route.params;
   return (
     <View
     style={style.viewStyle}
     >
-      <Text></Text>
+      <Text style={style.textStyle2}>{semesterName}</Text>
         <FlatList
         data={courseList}
         showsVerticalScrollIndicator={false}
@@ -19,9 +18,6 @@ const CoursePage = (props) => {
         > {item.name}</Text>);
         }}
         ></FlatList>
-        <Text></Text>
-        <Text></Text>
-        <Text></Text>
         <Text></Text>
         <Text></Text>
     </View>
@@ -38,7 +34,9 @@ const style = StyleSheet.create({
   },
 
   textStyle2: {
+    fontSize:35,
     marginVertical: 20,
+    fontWeight:"bold",
   },
 
   viewStyle:{
