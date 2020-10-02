@@ -3,29 +3,49 @@ import { View, FlatList, Text, StyleSheet } from "react-native";
 
 const CoursePage = (props) => {
 
-    const {courseList} = props.courseList;
+    const {courseList} = props.route.params;
+    {console.log(props);}
   return (
-    <View>
+    <View
+    style={style.viewStyle}
+    >
+      <Text></Text>
         <FlatList
         data={courseList}
+        showsVerticalScrollIndicator={false}
         renderItem={function({item}){
-        return(<Text>{item.name}</Text>);
+        return(<Text
+        style={style.textStyle}
+        > {item.name}</Text>);
         }}
         ></FlatList>
-      <Text>Course page</Text>
+        <Text></Text>
+        <Text></Text>
+        <Text></Text>
+        <Text></Text>
+        <Text></Text>
     </View>
   );
 };
 
 const style = StyleSheet.create({
   textStyle: {
-    fontSize: 25,
-    marginVertical: 10,
+    fontSize: 30,
+    marginVertical:30,
+    borderWidth:3,
+    alignItems: "center",
+    borderRadius:5
   },
 
   textStyle2: {
     marginVertical: 20,
   },
+
+  viewStyle:{
+    backgroundColor:"lightcyan",
+    justifyContent: "center",
+    alignItems: "center",
+  }
 });
 
 export default CoursePage;

@@ -20,7 +20,7 @@ const FacultyPage = () => {
       <FlatList
         data={FacultyList}
         renderItem={function ({ item }) {
-          return <Text style={style.textStyle} >{item.name}</Text>;
+          return <Text style={style.textStyle} > {item.name}</Text>;
         }}
       ></FlatList>
       <Text style={style.textStyle}></Text>
